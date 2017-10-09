@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+# this tells the shell to execute my file using Ruby
+# remember to chmod u+x FILE_PATH, bin/cli
+
+require_relative "../lib/info.rb"
+
+puts "To Be Decided:"
+list_options
+menu
