@@ -4,6 +4,6 @@
 
 require_relative "../lib/info.rb"
 
-puts "To Be Decided:"
+puts "UNESCO World Heritage Sites:"
 list_options
 menu

@@ -8,7 +8,7 @@ def list_options
 end
 
 def menu
-  puts "Enter number of item you would like more info on or exit"
+  puts "Enter number of site you would like more info on or exit"
   input = nil
   while input != "exit"
     input = gets.strip
