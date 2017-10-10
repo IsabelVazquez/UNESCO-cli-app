@@ -1,9 +1,5 @@
 #!/usr/bin/env ruby
-# this tells the shell to execute my file using Ruby
-# remember to chmod u+x FILE_PATH, bin/cli
 
-require_relative "../lib/info.rb"
+require_relative '../config/environment'
 
-puts "Welcome to UNESCO World Heritage Sites!"
-make_options
-menu
+Controller.new.call
