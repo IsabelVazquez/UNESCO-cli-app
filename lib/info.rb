@@ -1,26 +1,23 @@
+require_relative "../lib/scraper.rb"
+
 def list_options
-  puts <<-DOC
-    1. option 1
-    2. option 2
-    3. option 3
-    4. option 4
-  DOC
+  Scraper.make_sites
+  Site.all.each.with_index(1) do |site, i|
+    puts "#{i}. #{site.title}"
+  end
 end
 
 def menu
-  puts "Enter number of site you would like more info on or exit"
+  puts "Enter the site number you would like more info on or type exit:"
   input = nil
   while input != "exit"
     input = gets.strip
-    case input
-    when "1"
-      puts "more info on 1"
-    when "2"
-      puts "more info on 2"
-    when "3"
-      puts "more info on 3"
-    when "4"
-      puts "more info on 4"
+    if input.to_i > 0
+      site = Site.all[input.to_i - 1]
+      puts "#{site.title}"
+      puts "#{site.description}"
+    else
+      puts "Type an integer or exit please."
     end
   end
 end
